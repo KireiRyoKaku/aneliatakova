@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анелия Такова - Сън за тебе, сън за мене</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="#home">Anelia Takova</a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Начало</a></li>
+                        <li><a href="#about" class="nav-link">За мен</a></li>
+                        <li><a href="#services" class="nav-link">Консултации</a></li>
+                        <li><a href="#blog" class="nav-link">Блог</a></li>
+                        <li><a href="#contact" class="nav-link">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Здравей,</span>
+                        <span class="name">аз съм Анелия!</span>
+                    </h1>
+                    <p class="hero-subtitle">Сертифициран консултант по детски сън</p>
+                    <p class="hero-description">Пълноценен сън за тебе и за мене</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Запази час</a>
+                        <a href="#services" class="btn btn-secondary">Виж консултациите</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/heroimage.jpg" alt="Anelia Takova">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Кой съм аз</span>
+                <h2 class="section-title">За мен</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/images/profile.jpg" alt="Anelia Takova">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Сертифициран консултант по детски сън</h3>
+                    <p>Сертифициран консултант по детски сън, създател на „Сън за тебе, сън за мене", мама на двама. Упоритият ми отказ да приема, че майчинство = недоспиване, беше моя движеща сила да изградя задълбочени и специализирани познания за детския сън.</p>
+                    <p>Днес подкрепям много семейства в предизвикателствата по пътя им като родители. Да им помогна в изграждането на увереност, спокойствие и позитивизъм е главна моя цел и призвание.</p>
+                    
+                    <div class="skills">
+                        <h4>Защо да се обърнеш към мен</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Индивидуален подход</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Сертифициран специалист</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-hands-helping"></i>
+                                <span>Щадящи методи</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-smile"></i>
+                                <span>Доказани резултати</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Години опит</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Семейства</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100</span>
+                            <span class="stat-label">% Отдаденост</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Как мога да помогна</span>
+                <h2 class="section-title">Консултации</h2>
+                <p class="section-description">Избери подходящата за теб подкрепа</p>
+            </div>
+            <div class="services-grid">
+                <a href="#contact" class="service-card-link" data-service="Организация на съня">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h3>Организация на съня</h3>
+                        <p>Помощ при изграждане на подходящ ритъм на сън и бодърстване според възрастта на детето.</p>
+                        <ul class="service-features">
+                            <li>Индивидуален режим</li>
+                            <li>Оптимизиране на дремките</li>
+                            <li>Подготовка за нощен сън</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span>Запази час <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card-link" data-service="Лесно приспиване">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h3>Лесно приспиване</h3>
+                        <p>Изграждане на ефективни методи за приспиване без стрес и напрежение.</p>
+                        <ul class="service-features">
+                            <li>Щадящи техники</li>
+                            <li>Ритуали за заспиване</li>
+                            <li>Самостоятелно заспиване</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span>Запази час <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card-link" data-service="Спокоен нощен сън">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud-moon"></i>
+                        </div>
+                        <h3>Спокоен нощен сън</h3>
+                        <p>Намаляване на нощните събуждания и подобряване качеството на съня.</p>
+                        <ul class="service-features">
+                            <li>По-малко събуждания</li>
+                            <li>По-дълъг сън</li>
+                            <li>Спокойни нощи</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span>Запази час <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card-link" data-service="Консултация на живо">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-smile-beam"></i>
+                        </div>
+                        <h3>Консултация на живо</h3>
+                        <p>Индивидуална онлайн консултация с подробен анализ и персонален план.</p>
+                        <ul class="service-features">
+                            <li>60-90 минути</li>
+                            <li>Личен план</li>
+                            <li>Последващи срещи</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span>Запази час <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card-link" data-service="Безплатен разговор">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Безплатен разговор</h3>
+                        <p>15-минутна запознавателна среща за обсъждане на предизвикателствата.</p>
+                        <ul class="service-features">
+                            <li>Без ангажимент</li>
+                            <li>Първична оценка</li>
+                            <li>Отговори на въпроси</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span>Запази час <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card-link" data-service="Пълно проследяване">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Пълно проследяване</h3>
+                        <p>Цялостна подкрепа с редовни консултации и непрекъснат контакт.</p>
+                        <ul class="service-features">
+                            <li>2-4 седмици</li>
+                            <li>Ежедневна подкрепа</li>
+                            <li>Коригиране на плана</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span>Запази час <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Полезно четиво</span>
+                <h2 class="section-title">Блог</h2>
+                <p class="section-description">Статии, съвети и информация за детския сън</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog-1.jpg" alt="Blog post">
+                        <div class="blog-category">Съвети</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> Ноември 5, 2025</span>
+                            <span class="blog-reading"><i class="far fa-clock"></i> 5 мин</span>
+                        </div>
+                        <h3>Как да организирам съня на детето си</h3>
+                        <p>Практически съвети за изграждане на здравословен режим на сън според възрастта на бебето.</p>
+                        <a href="blog/post-1.html" class="blog-link">Прочети повече <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog-2.jpg" alt="Blog post">
+                        <div class="blog-category">Методи</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> Ноември 1, 2025</span>
+                            <span class="blog-reading"><i class="far fa-clock"></i> 7 мин</span>
+                        </div>
+                        <h3>Щадящи методи за приспиване</h3>
+                        <p>Как да помогнем на детето да заспива самостоятелно без сълзи и стрес.</p>
+                        <a href="blog/post-2.html" class="blog-link">Прочети повече <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog-3.jpg" alt="Blog post">
+                        <div class="blog-category">Помощ</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> Октомври 28, 2025</span>
+                            <span class="blog-reading"><i class="far fa-clock"></i> 4 мин</span>
+                        </div>
+                        <h3>Нощни събуждания - причини и решения</h3>
+                        <p>Разбиране на причините за честите нощни събуждания и как да ги намалим.</p>
+                        <a href="blog/post-3.html" class="blog-link">Прочети повече <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Свържи се с мен</span>
+                <h2 class="section-title">Нека работим заедно</h2>
+                <p class="section-description">Имаш въпроси? С радост ще ти помогна!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Информация за контакт</h3>
+                    <p>Свържи се с мен по всякакъв начин, който е удобен за теб. Обикновено отговарям в рамките на 24 часа.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Имейл</h4>
+                                <a href="mailto:hello@aneliatakova.com">hello@aneliatakova.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Телефон</h4>
+                                <a href="tel:+359888123456">+359 888 123 456</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Местоположение</h4>
+                                <p>София, България</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Твоето име" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Твоят имейл" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Тема" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Твоето съобщение" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Изпрати съобщение</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Anelia Takova. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Начало</a>
+                    <a href="#about">За мен</a>
+                    <a href="#services">Консултации</a>
+                    <a href="#blog">Блог</a>
+                    <a href="#contact">Контакти</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
