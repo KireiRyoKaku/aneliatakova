@@ -1,90 +1,276 @@
 <!DOCTYPE html>
 <html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакти - Сън за тебе, сън за мене</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="blog/blog-style.css">
-</head>
-<body>
-    <nav class="navbar scrolled" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="index.html">Сън за тебе, сън за мене</a>
-                </div>
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-list">
-                        <li><a href="index.html#home" class="nav-link">Начало</a></li>
-                        <li><a href="za-men.html" class="nav-link">За мен</a></li>
-                        <li><a href="konsultacii.html" class="nav-link">Консултации</a></li>
-                        <li><a href="blog/blog-template.html" class="nav-link">Блог</a></li>
-                        <li><a href="kontakti.html" class="nav-link active">Контакти</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <section class="contact-page">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Свържи се с мен</span>
-                <h2 class="section-title">Контакти</h2>
-                <p class="section-description">Имаш въпроси? С радост ще ти помогна!</p>
-            </div>
+    <!-- CDN Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Информация за контакт</h3>
-                    <p>Свържи се с мен по най-удобния за теб начин. Обикновено отговарям в рамките на 24 часа.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-text">
-                                <h4>Имейл</h4>
-                                <a href="mailto:hello@aneliatakova.com">hello@aneliatakova.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div class="contact-text">
-                                <h4>Телефон</h4>
-                                <a href="tel:+359888123456">+359 888 123 456</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Shared Config -->
+    <script src="shared-head.js"></script>
+  </head>
+  <body>
+    <!-- Navbar Component (solid background for inner pages) -->
+    <div id="navbar-placeholder"></div>
 
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group"><input type="text" id="name" name="name" placeholder="Твоето име" required></div>
-                    <div class="form-group"><input type="email" id="email" name="email" placeholder="Твоят имейл" required></div>
-                    <div class="form-group"><input type="text" id="subject" name="subject" placeholder="Тема" required></div>
-                    <div class="form-group"><textarea id="message" name="message" rows="5" placeholder="Твоето съобщение" required></textarea></div>
-                    <button type="submit" class="btn btn-primary btn-block">Изпрати съобщение</button>
-                </form>
-            </div>
-        </div>
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-5 text-center">
+        <span class="section-label">Свържи се с мен</span>
+        <h1 class="font-heading text-4xl md:text-5xl text-text-dark mb-4">
+          Обърни се към мен
+        </h1>
+        <p class="text-text-light max-w-2xl mx-auto">
+          Ще се радвам да съдействам и заедно да подобрим съня на твоето бебе,
+          <b>защото е важно да има сън и за тебе!</b>
+        </p>
+      </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Сън за тебе, сън за мене. Всички права запазени.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html#home">Начало</a>
-                    <a href="za-men.html">За мен</a>
-                    <a href="konsultacii.html">Консултации</a>
-                    <a href="blog/blog-template.html">Блог</a>
-                    <a href="kontakti.html">Контакти</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Contact Content -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div>
+            <h2 class="font-heading text-2xl mb-6">Информация за контакт</h2>
+            <p class="text-text-light mb-6">
+              Ако имаш въпрос или желаеш да заявиш консултация или пакет с
+              последваща подкрепа, пиши ми или ми се обади още сега!
+            </p>
 
-    <script src="script.js"></script>
-</body>
+            <div class="space-y-6 mb-8">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-envelope text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Имейл</h4>
+                  <a
+                    href="mailto:sunzatebe@gmail.com"
+                    class="text-secondary hover:underline"
+                    >sunzatebe@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-phone text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Телефон</h4>
+                  <a
+                    href="tel:+359898707081"
+                    class="text-secondary hover:underline"
+                    >0898 707 081</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-primary/10 p-6 rounded-2xl">
+              <h4 class="font-heading text-xl mb-3">Безплатна консултация</h4>
+              <p class="text-text-light mb-4">
+                Ако се чудиш дали и кое е подходящото за теб, запази си час за
+                една безплатна 15-минутна консултация с мен и ще обсъдим всичко,
+                което те вълнува.
+              </p>
+              <a href="#book" class="btn-primary">Запази час</a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="mt-8">
+              <h4 class="font-semibold mb-4">Последвай ме</h4>
+              <div class="flex gap-4">
+                <a
+                  href="https://www.facebook.com/sunzatebe"
+                  target="_blank"
+                  rel="noopener"
+                  class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-secondary"
+                >
+                  <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/sunzatebe"
+                  target="_blank"
+                  rel="noopener"
+                  class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-secondary"
+                >
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div>
+            <div class="bg-gray-50 p-8 rounded-2xl">
+              <h2 class="font-heading text-2xl mb-6">Изпрати съобщение</h2>
+              <form
+                x-data="{ submitted: false }"
+                @submit.prevent="submitted = true"
+                class="space-y-5"
+              >
+                <div>
+                  <label for="name" class="block text-sm font-medium mb-2"
+                    >Име *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="input-field"
+                    placeholder="Твоето име"
+                  />
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium mb-2"
+                    >Имейл *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="input-field"
+                    placeholder="email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label for="phone" class="block text-sm font-medium mb-2"
+                    >Телефон</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="input-field"
+                    placeholder="0888 123 456"
+                  />
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-sm font-medium mb-2"
+                    >Относно *</label
+                  >
+                  <select
+                    id="subject"
+                    name="subject"
+                    required
+                    class="input-field"
+                  >
+                    <option value="single">Единична консултация</option>
+                    <option value="free">Безплатна консултация</option>
+                    <option value="package">Пакет с проследяване</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium mb-2"
+                    >Съобщение *</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="input-field"
+                    placeholder="Опиши накратко ситуацията и въпросите си..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary w-full text-center">
+                  Изпрати съобщение
+                </button>
+
+                <div
+                  x-show="submitted"
+                  x-transition
+                  class="bg-accent/20 text-accent-dark p-4 rounded-lg text-center"
+                >
+                  <i class="fas fa-check-circle text-accent text-2xl mb-2"></i>
+                  <p class="font-semibold">Благодаря за съобщението!</p>
+                  <p class="text-sm">Ще се свържа с теб скоро.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="py-16 bg-primary/10">
+      <div class="max-w-4xl mx-auto px-5 text-center">
+        <h2 class="font-heading text-3xl mb-4">Запази час за консултация</h2>
+        <p class="text-text-light mb-8">
+          Избери удобно време за теб и ще се свържа да потвърдя часа.
+        </p>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <p class="text-text-light mb-4">
+            <i
+              class="fas fa-calendar-alt text-4xl text-secondary mb-4 block"
+            ></i>
+            За да запазиш час, моля свържи се с мен по имейл или телефон, или
+            използвай формата за контакт по-горе.
+          </p>
+
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/sunzatebe/15min?hide_gdpr_banner=1"
+            style="min-width: 320px; height: 700px"
+          ></div>
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            async
+          ></script>
+          <!-- Calendly inline widget end -->
+          <div class="flex gap-4 justify-center flex-wrap">
+            <a href="mailto:sunzatebe@gmail.com" class="btn-primary">
+              <i class="fas fa-envelope mr-2"></i> Изпрати имейл
+            </a>
+            <a
+              href="tel:+359898707081"
+              class="btn-primary bg-accent hover:bg-green-600"
+            >
+              <i class="fas fa-phone mr-2"></i> Обади се
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components.js"></script>
+  </body>
 </html>

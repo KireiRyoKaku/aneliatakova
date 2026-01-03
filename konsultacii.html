@@ -1,178 +1,439 @@
 <!DOCTYPE html>
 <html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Консултации - Сън за тебе, сън за мене</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="blog/blog-style.css">
-</head>
-<body>
-    <nav class="navbar scrolled" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="index.html">Сън за тебе, сън за мене</a>
-                </div>
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-list">
-                        <li><a href="index.html#home" class="nav-link">Начало</a></li>
-                        <li><a href="za-men.html" class="nav-link">За мен</a></li>
-                        <li><a href="konsultacii.html" class="nav-link active">Консултации</a></li>
-                        <li><a href="blog/blog-template.html" class="nav-link">Блог</a></li>
-                        <li><a href="kontakti.html" class="nav-link">Контакти</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <section class="services-page">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Как мога да помогна</span>
-                <h2 class="section-title">Консултации по детски сън</h2>
-                <p class="section-description">Какво включват различните видове консултации по детски сън и кога са подходящи?</p>
-            </div>
+    <!-- CDN Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-            <section >
- <br><p><center><i>В зависимост от твоята индивидуална ситуация и необходимост можеш да избираш между единична консултация или консултация в пакет с последваща подкрепа в рамките на 1 до 4 седмици след това.
-</i></center></p>
- <br><p><center><i>Не си сигурен кой вариант да избереш и дали изобщо консултации по детски сън ще бъдат полезни в твоя случай?
-</i></center></p>
- <br><p><center><i>Възползвай се от възможността за 15-минутен безплатен разговор с мен, в който да обсъдим проблема и как мога да съм полезна.</i></center></p>
-            </section>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-moon"></i></div>
-                    <h3>Eдинична консултация</h3>
-                    <p>Подходяща когато:
-                    <ul>
-                        <li>си мотивиран/а да работиш самостоятелно над проблема и желаеш да обсъдим “цялостната картина”, за да получиш ясни насоки за подобряване, които да приложиш сам/а след това</li>
-                        <li>предварителен анализ на анкета и дневник на съня</li>
-                        <li>90-минутна консултация*</li>
-                        <li>индивидуални ресурси след срещата: запис, индивидуален примерен режим, кратко писмено обобщение с насоки</p></li>
-                    </ul>
-                    <p>95 лв / 48,57 € с опция за надграждане**</p>
-                        <a href="kontakti.html" class="btn btn-primary">Заяви сега</a>
-                </div>
+    <!-- Shared Config -->
+    <script src="shared-head.js"></script>
+  </head>
+  <body>
+    <!-- Navbar Component -->
+    <div id="navbar-placeholder"></div>
 
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-bed"></i></div>
-                 <h3>Консултация с проследяване</h3>
-                    <p>Подходяща когато:
-                    <ul>
-                        трудностите със съня не са отскоро, не знаеш дали ще се справиш сам/а с тях и имаш нужда освен от ясни насоки и от допълнителна подкрепа и подход, за да подобриш ситуацията трайно и ефективно
-                            <li>първоначален разговор по телефона</li>
-                            <li>всичко от единичната консултация</li>
-                            <li>+ всекидневен контакт (разговор/чат)</li>
-                            <li>+ активна съвместна работа по съня с фокус върху режима: 1 седмица 170 лв / 86,92 € с опция за надграждане**</li>
-                            <li>+ активна съвместна работа по съня с фокус върху режима и начина на заспиване: 2 седмици 245 лв / 125,27 € с опция за надграждане**</li>
-                            <li>+ активна съвместна работа по съня с фокус върху режима и начина на заспиване: 4 седмици</li>
-                            <li>+ допълнителен разговор до 30 дни след края на проследяването 395 лв / 201,96 € с опция за надграждане**</li>
-                    </ul>
-                        <a href="kontakti.html" class="btn btn-primary">Заяви сега</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-cloud-moon"></i></div>
-                    <h3>Пакет, "Добре дошло, бебе!"</h3>
-                    родители в очакване (защо не и като подарък), както и такива с току що родено бебе, които желаят да получат добри основи и най-вече - реалистични очаквания за съня на новороденото и да имат едно спокойно и плавно начало на живота с бебе.
-                     <ul>
-                        трудностите със съня не са отскоро, не знаеш дали ще се справиш сам/а с тях и имаш нужда освен от ясни насоки и от допълнителна подкрепа и подход, за да подобриш ситуацията трайно и ефективно.
-                        <li>предварително запознаване с всеки индивидуален казус</li>
-                        <li>40-минутен разговор* </li>
-                        <li>пространство за всички ваши въпроси</li>
-                        <li>полезно знание и подкрепа в този деликатен момент</li>
-                        <li>запис от разговора</li>
-                        <li>+ "Твоят аудио пътеводител" - аудио наръчник за съня</li>
-                        <li>+ 1 бонус разговор (30 мин.) преди навършване на 3-месечна възраст на бебето</li>
-                        <li>+ отстъпка 10% за всяка следваща консултация</li>
-                        <li>+ по желание може да бъде красиво оформен като подарък</li>
-<p>200 лв / 102,26 €</p>
-                    </ul>
-                        <a href="kontakti.html" class="btn btn-primary">Заяви сега</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-comments"></i></div>
-                    <h3>Безплатен разговор</h3>
-                    <p>15-минутна запознавателна среща за обсъждане на предизвикателствата.</p>
-                    <a href="kontakti.html" class="btn btn-primary">Запази безплатен разговор</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="legend">
-        <center>
-          <p> <br> * консултациите се провеждат предимно онлайн, но има и опция на живо за гр. Пловдив. Ако желаеш да се възползваш, кажи ми.
-        <br>** опция за надграждане до 3 дни след проведена основна консултация към по-голям пакет от услуги чрез доплащане единствено на разликата в цената
-        </p>    
-    </center>
-    </section>
-
-    <section class="additional consult">
-        <center><h1>Допълнителни консултации </h1>
-<h2>За семейства, с които сме работили заедно в последните 30 дни</h2>
-
- 
-<p><br>Кратка консултация (30 - 60 мин.) <h2>45  лв / 23,00 €</h2></p>
-<p><br>Допълнителна седмица проследяване    <h2> 75 лв / 38,35 €</h2></p>
-    </center>
-</section>
-
-<section class="otstupki">
-    <center>
-        <h1>Отстъпки</h1>
-
-        <div>
-        <p><b>за предишни клиенти: <h2>10%</h2></b>
-ако вече сме работили заедно по съня на твоето дете под формата на единична консултация или проследяване, в бъдеще можеш да се възползваш от 10% намаление от цената на всяка следваща консултация (единична или с проследяване), която заявиш.
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-5 text-center">
+        <span class="section-label">Как мога да помогна</span>
+        <h1 class="section-title">Консултации по детски сън</h1>
+        <p class="text-text-light text-lg max-w-2xl mx-auto">
+          Какво включват различните видове консултации по детски сън и кога са
+          подходящи?
         </p>
-        </div>
-        <div>
-        <p><b>за близнаци: <h2>2 = 1</h2></b>
-когато работим заедно по съня на твоите близнаци, всяка консултация за двете деца е на същата цена като за едно дете.
-        </p>
-        </div>
-    </center>
-
-</section>
-    <section class="free-call">
-        <center><h2>Не отлагай недоспиването!</h2></center> 
-
-<br><p><center>Ако не си сигурен/а кой тип консултация е подходяща в твоя случай, имаш съмнение дали консултации по сън въобще са това, от което имаш нужда в момента или все още не си напълно убеден/а, че си струва да се обърнеш към консултант по детски сън, за да работиш над проблема.
-</p></center>
- 
-<br><p><center>Не се колебай да ме потърсиш, за да поговорим в един безплатен и неангажиращ разговор за твоя проблем.
-</p></center>
-
-<br><p><center>А аз ще се постарая възможно най-подробно да отговоря на всичките ти въпроси и колебания, свързани с консултациите по сън, както и да те ориентирам дали и как бих могла да съм полезна във вашия случай.
-</p></center>
- 
-
-<center><br><h2>Запази своя 15-минутен безплатен разговор още сега!</h2></center>
+      </div>
     </section>
 
-    <section class="calendly"></section>
+    <!-- Intro Text -->
+    <section class="py-8 bg-white">
+      <div
+        class="max-w-3xl mx-auto px-5 text-center space-y-4 text-text-light italic"
+      >
+        <p>
+          В зависимост от твоята индивидуална ситуация и необходимост можеш да
+          избираш между единична консултация или консултация в пакет с
+          последваща подкрепа в рамките на 1 до 4 седмици след това.
+        </p>
+        <p>
+          Не си сигурен кой вариант да избереш и дали изобщо консултации по
+          детски сън ще бъдат полезни в твоя случай?
+        </p>
+        <p class="font-semibold text-text-dark not-italic">
+          Възползвай се от възможността за 15-минутен безплатен разговор с мен,
+          в който да обсъдим проблема и как мога да съм полезна.
+        </p>
+      </div>
+    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Сън за тебе, сън за мене. Всички права запазени.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html#home">Начало</a>
-                    <a href="za-men.html">За мен</a>
-                    <a href="konsultacii.html">Консултации</a>
-                    <a href="blog/blog-template.html">Блог</a>
-                    <a href="kontakti.html">Контакти</a>
-                </div>
+    <!-- Services Grid -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-5">
+        <!-- 3 Consultation Cards in a Row -->
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <!-- Single Consultation -->
+          <div class="card p-6 flex flex-col h-full">
+            <div
+              class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-moon text-xl text-secondary"></i>
             </div>
-        </div>
-    </footer>
+            <h3 class="font-heading text-xl text-text-dark mb-3">
+              Единична консултация
+            </h3>
+            <p class="text-text-light mb-3 font-semibold text-sm">
+              Подходяща когато:
+            </p>
+            <ul class="space-y-2 text-text-light mb-4 flex-1 text-sm">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span
+                  >Си мотивиран/а да работиш самостоятелно над проблема и желаеш
+                  ясни насоки за подобряване</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span>Предварителен анализ на анкета и дневник на съня</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span
+                  >90-минутна консултация<span
+                    class="relative inline-block ml-0.5 cursor-help group"
+                    ><span class="text-secondary font-bold">*</span
+                    ><span
+                      class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-center z-10"
+                      >Консултациите се провеждат предимно онлайн, но има и
+                      опция на живо за гр. Пловдив.<span
+                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800"
+                      ></span></span></span
+                ></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span
+                  >индивидуални ресурси след срещата: запис, индивидуален
+                  примерен режим, кратко писмено обобщение с насоки</span
+                >
+              </li>
+            </ul>
+            <div class="mt-auto">
+              <p class="text-xl font-bold text-secondary mb-2">
+                48,57 €
+                <span class="text-sm font-normal text-text-light">/ 95 лв</span>
+              </p>
+              <p class="text-xs text-text-light mb-3">
+                с опция за надграждане<span
+                  class="relative inline-block ml-0.5 cursor-help group"
+                  ><span class="text-secondary font-bold">**</span
+                  ><span
+                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-center z-10"
+                    >Опция за надграждане до 3 дни след проведена консултация
+                    към по-голям пакет чрез доплащане на разликата.<span
+                      class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800"
+                    ></span></span
+                ></span>
+              </p>
+              <a
+                href="kontakti.html"
+                class="btn-primary inline-block text-sm px-5 py-2"
+                >Заяви сега</a
+              >
+            </div>
+          </div>
 
-    <script src="script.js"></script>
-</body>
+          <!-- Consultation with Follow-up -->
+          <div
+            class="card p-6 flex flex-col h-full border-2 border-primary relative"
+          >
+            <div
+              class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold"
+            >
+              Най-популярен
+            </div>
+            <div
+              class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-bed text-xl text-secondary"></i>
+            </div>
+            <h3 class="font-heading text-xl text-text-dark mb-3">
+              Консултация с проследяване
+            </h3>
+            <p class="text-text-light mb-4 font-semibold">Подходяща когато:</p>
+            <p class="text-text-light mb-4 text-sm">
+              трудностите със съня не са отскоро, не знаеш дали ще се справиш
+              сам/а с тях и имаш нужда освен от ясни насоки и от допълнителна
+              подкрепа и подход, за да подобриш ситуацията трайно и ефективно
+            </p>
+            <ul class="space-y-1.5 text-text-light mb-4 flex-1 text-xs">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-0.5 flex-shrink-0"></i>
+                <span>Първоначален разговор по телефона</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-0.5 flex-shrink-0"></i>
+                <span>Всичко от единичната консултация</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-plus text-accent mt-0.5 flex-shrink-0"></i>
+                <span>Всекидневен контакт (разговор/чат)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-plus text-accent mt-0.5 flex-shrink-0"></i>
+                <span>Активна съвместна работа по съня с фокус върху...</span>
+              </li>
+            </ul>
+            <div class="space-y-2 text-xs border-t border-gray-200 pt-3 mb-4">
+              <div class="flex justify-between items-center">
+                <span
+                  ><strong>...режима</strong> (1 седмица)<span
+                    class="relative inline-block ml-0.5 cursor-help group"
+                    ><span class="text-secondary font-bold">**</span
+                    ><span
+                      class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-center z-10"
+                      >Опция за надграждане до 3 дни след проведена консултация
+                      към по-голям пакет чрез доплащане на разликата.<span
+                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800"
+                      ></span></span></span
+                ></span>
+                <span class="font-bold text-secondary">86,92 € / 170 лв</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  ><strong>...режима и начина на заспиване</strong> (2
+                  седмици)<span
+                    class="relative inline-block ml-0.5 cursor-help group"
+                    ><span class="text-secondary font-bold">**</span
+                    ><span
+                      class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-center z-10"
+                      >Опция за надграждане до 3 дни след проведена консултация
+                      към по-голям пакет чрез доплащане на разликата.<span
+                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800"
+                      ></span></span></span
+                ></span>
+                <span class="font-bold text-secondary">125,27 € / 245 лв</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span><strong>пълен пакет</strong> (4 седмици)</span>
+                <span class="font-bold text-secondary">201,96 € / 395 лв</span>
+              </div>
+            </div>
+            <div class="mt-auto">
+              <a
+                href="kontakti.html"
+                class="btn-primary inline-block text-sm px-5 py-2"
+                >Заяви сега</a
+              >
+            </div>
+          </div>
+
+          <!-- Welcome Baby Package -->
+          <div class="card p-6 flex flex-col h-full">
+            <div
+              class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-cloud-moon text-xl text-secondary"></i>
+            </div>
+            <h3 class="font-heading text-xl text-text-dark mb-3">
+              Пакет "Добре дошло, бебе!"
+            </h3>
+            <p class="text-text-light mb-3 text-sm">
+              За родители в очакване и тези с новородено бебе, които желаят
+              добри основи и реалистични очаквания за съня.
+            </p>
+            <ul class="space-y-2 text-text-light mb-4 flex-1 text-sm">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span
+                  >40-минутен разговор<span
+                    class="relative inline-block ml-0.5 cursor-help group"
+                    ><span class="text-secondary font-bold">*</span
+                    ><span
+                      class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-center z-10"
+                      >Консултациите се провеждат предимно онлайн, но има и
+                      опция на живо за гр. Пловдив.<span
+                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800"
+                      ></span></span></span
+                ></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span>"Твоят аудио пътеводител" - аудио наръчник за съня</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span>1 бонус разговор (30 мин.) преди 3-месечна възраст</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
+                <span>10% отстъпка за следващи консултации</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-gift text-primary mt-1 flex-shrink-0"></i>
+                <span>Може да бъде оформен като подарък</span>
+              </li>
+            </ul>
+            <div class="mt-auto">
+              <p class="text-xl font-bold text-secondary mb-3">
+                102,26 €
+                <span class="text-sm font-normal text-text-light"
+                  >/ 200 лв</span
+                >
+              </p>
+              <a
+                href="kontakti.html"
+                class="btn-primary inline-block text-sm px-5 py-2"
+                >Заяви сега</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Free Consultation - Full Width -->
+        <div
+          class="bg-accent/10 border-2 border-accent rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <div class="flex items-center gap-6">
+            <div
+              class="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-comments text-2xl text-accent"></i>
+            </div>
+            <div>
+              <h3 class="font-heading text-2xl text-text-dark mb-2">
+                Безплатен разговор
+              </h3>
+              <p class="text-text-light">
+                15-минутна запознавателна среща за обсъждане на
+                предизвикателствата и дали консултациите по сън са подходящи за
+                твоя случай.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-6 flex-shrink-0">
+            <p class="text-2xl font-bold text-accent">Безплатно</p>
+            <a
+              href="#"
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sunzatebe/15min?hide_gdpr_banner=1'});return false;"
+              class="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-full inline-block transition-colors duration-300 whitespace-nowrap"
+            >
+              Запази безплатен разговор
+            </a>
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="mt-8 text-center text-sm text-text-light">
+          <p class="flex items-center justify-center gap-2">
+            <i class="fas fa-info-circle text-secondary"></i>
+            <span
+              >Задръж курсора над
+              <span class="text-secondary font-bold">*</span> или
+              <span class="text-secondary font-bold">**</span> за повече
+              информация</span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-5">
+        <h2 class="font-heading text-3xl text-center mb-4">
+          Допълнителни консултации
+        </h2>
+        <p class="text-center text-text-light mb-8">
+          За семейства, с които сме работили заедно в последните 30 дни
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 p-6 rounded-2xl text-center">
+            <p class="text-text-light mb-2">Кратка консултация (30-60 мин.)</p>
+            <p class="text-2xl font-bold text-secondary">
+              23,00 €
+              <span class="text-lg font-normal text-text-light">/ 45 лв</span>
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-2xl text-center">
+            <p class="text-text-light mb-2">
+              Допълнителна седмица проследяване
+            </p>
+            <p class="text-2xl font-bold text-secondary">
+              38,35 €
+              <span class="text-lg font-normal text-text-light">/ 75 лв</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discounts -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-5">
+        <h2 class="font-heading text-3xl text-center mb-12">Отстъпки</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+            <div
+              class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-3xl font-bold text-secondary">10%</span>
+            </div>
+            <h3 class="font-heading text-xl mb-4">За предишни клиенти</h3>
+            <p class="text-text-light text-sm">
+              Ако вече сме работили заедно, можеш да се възползваш от 10%
+              намаление за всяка следваща консултация.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+            <div
+              class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="text-2xl font-bold text-secondary">2 = 1</span>
+            </div>
+            <h3 class="font-heading text-xl mb-4">За близнаци</h3>
+            <p class="text-text-light text-sm">
+              Когато работим заедно по съня на твоите близнаци, консултацията за
+              двете деца е на цената за едно.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+      <div class="max-w-3xl mx-auto px-5 text-center">
+        <h2 class="font-heading text-3xl md:text-4xl mb-6">
+          Не отлагай недоспиването!
+        </h2>
+        <p class="text-lg mb-4 opacity-95">
+          Ако не си сигурен/а кой тип консултация е подходяща в твоя случай,
+          имаш съмнение дали консултации по сън въобще са това, от което имаш
+          нужда в момента или все още не си напълно убеден/а, че си струва да се
+          обърнеш към консултант по детски сън, за да работиш над проблема.
+        </p>
+        <p class="text-lg mb-4 opacity-95">
+          Не се колебай да ме потърсиш, за да поговорим в един безплатен и
+          неангажиращ разговор за твоя проблем.
+        </p>
+        <p class="text-lg mb-8 opacity-95">
+          А аз ще се постарая възможно най-подробно да отговоря на всичките ти
+          въпроси и колебания, свързани с консултациите по сън, както и да те
+          ориентирам дали и как бих могла да съм полезна във вашия случай.
+        </p>
+        <a
+          href="kontakti.html"
+          class="btn-primary bg-white text-secondary hover:bg-gray-100"
+        >
+          Запази безплатен разговор
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components.js"></script>
+  </body>
 </html>

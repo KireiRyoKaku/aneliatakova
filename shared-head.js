@@ -1,0 +1,70 @@
+/**
+ * Shared Head Configuration
+ * Include this AFTER tailwindcss CDN in every page
+ * <script src="https://cdn.tailwindcss.com"></script>
+ * <script src="shared-head.js"></script>
+ */
+
+// Tailwind Configuration - Shared across all pages
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#f4acb7",
+        secondary: "#c03221",
+        accent: "#9cb380",
+        "accent-dark": "#3e363f",
+        "text-dark": "#2e282a",
+        "text-light": "#6b5f70",
+      },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+        heading: ["Playfair Display", "serif"],
+        signature: ["Tangerine", "cursive"],
+      },
+    },
+  },
+};
+
+// Add shared styles to document
+const sharedStyles = document.createElement("style");
+sharedStyles.setAttribute("type", "text/tailwindcss");
+sharedStyles.textContent = `
+  @layer base {
+    html { scroll-behavior: smooth; }
+    body { @apply font-sans text-text-dark leading-relaxed; }
+  }
+  @layer components {
+    .btn-primary {
+      @apply px-8 py-3 bg-secondary text-white rounded-full font-semibold 
+             transition-all duration-300 hover:bg-red-700 hover:-translate-y-1 
+             hover:shadow-lg inline-block;
+    }
+    .btn-secondary {
+      @apply px-8 py-3 border-2 border-white text-white rounded-full font-semibold 
+             transition-all duration-300 hover:bg-white hover:text-primary 
+             hover:-translate-y-1 inline-block;
+    }
+    .btn-outline {
+      @apply px-8 py-3 border-2 border-secondary text-secondary rounded-full font-semibold 
+             transition-all duration-300 hover:bg-secondary hover:text-white 
+             hover:-translate-y-1 inline-block;
+    }
+    .section-title {
+      @apply font-heading text-4xl md:text-5xl text-text-dark mb-4;
+    }
+    .section-label {
+      @apply inline-block text-secondary font-semibold uppercase tracking-wider text-sm mb-2;
+    }
+    .card {
+      @apply bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 
+             hover:shadow-xl hover:-translate-y-2;
+    }
+    .input-field {
+      @apply w-full px-4 py-3 border border-gray-300 rounded-lg 
+             focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
+             transition-all duration-300;
+    }
+  }
+`;
+document.head.appendChild(sharedStyles);
