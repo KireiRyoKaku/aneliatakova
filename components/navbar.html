@@ -79,24 +79,23 @@
       <button
         @click="open = !open"
         class="lg:hidden flex flex-col gap-1.5 cursor-pointer z-50"
-        aria-label="Menu"
       >
         <span
           :class="[scrolled || !transparent ? 'bg-primary' : 'bg-white', open ? 'rotate-45 translate-y-2' : '']"
-          class="w-6 h-0.5 bg-primary transition-all duration-300"
+          class="w-6 h-0.5 transition-all duration-300"
         ></span>
         <span
           :class="[scrolled || !transparent ? 'bg-primary' : 'bg-white', open ? 'opacity-0' : '']"
-          class="w-6 h-0.5 bg-primary transition-all duration-300"
+          class="w-6 h-0.5 transition-all duration-300"
         ></span>
         <span
           :class="[scrolled || !transparent ? 'bg-primary' : 'bg-white', open ? '-rotate-45 -translate-y-2' : '']"
-          class="w-6 h-0.5 bg-primary transition-all duration-300"
+          class="w-6 h-0.5 transition-all duration-300"
         ></span>
       </button>
     </div>
 
-    <!-- Mobile Menu - hidden by default with CSS, x-show controls visibility after Alpine loads -->
+    <!-- Mobile Menu -->
     <div
       x-show="open"
       x-transition:enter="transition ease-out duration-300"
@@ -104,8 +103,6 @@
       x-transition:enter-end="opacity-100 translate-y-0"
       x-transition:leave="transition ease-in duration-200"
       class="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg"
-      :class="{ 'hidden': !open }"
-      style="display: none;"
     >
       <ul class="flex flex-col items-center py-6 gap-6">
         <li>
