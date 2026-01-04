@@ -110,34 +110,17 @@ function fixRelativePaths() {
   }, 150);
 }
 
-// Initialize Alpine on dynamically loaded components
-function initAlpineComponents() {
-  if (window.Alpine) {
-    document.querySelectorAll("nav[x-data]").forEach((el) => {
-      // Check if already initialized
-      if (!el._x_dataStack) {
-        Alpine.initTree(el);
-      }
-    });
-  }
-}
-
 // Initialize components when DOM is ready
 document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("navbar-placeholder", "components/navbar.html");
   await loadComponent("footer-placeholder", "components/footer.html");
 
   // Re-initialize Alpine for dynamically loaded components
-  // Try immediately, then retry after Alpine:init event if needed
-  initAlpineComponents();
-  
-  // Also listen for Alpine init in case it loads after components
-  document.addEventListener('alpine:init', initAlpineComponents);
-  document.addEventListener('alpine:initialized', initAlpineComponents);
-  
-  // Fallback: retry after a short delay for iOS Safari timing issues
-  setTimeout(initAlpineComponents, 100);
-  setTimeout(initAlpineComponents, 500);
+  if (window.Alpine) {
+    document.querySelectorAll("nav[x-data]").forEach((el) => {
+      Alpine.initTree(el);
+    });
+  }
 
   setActiveNavLink();
   fixRelativePaths();

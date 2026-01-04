@@ -4,11 +4,6 @@
 
 /* This file is loaded via <link> tag and provides shared styles */
 
-/* Alpine.js x-cloak - hide elements until Alpine initializes */
-[x-cloak] {
-  display: none !important;
-}
-
 /* Base Styles */
 html {
   scroll-behavior: smooth;
@@ -74,24 +69,4 @@ body {
 .nav-link:hover::after,
 .nav-link.active::after {
   @apply w-full;
-}
-
-/* iOS Safari Mobile Menu Fixes */
-nav {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-/* Ensure mobile menu is visible and clickable on iOS */
-nav [x-show] {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-/* iOS touch target fix for hamburger button */
-nav button {
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-  min-height: 44px;
-  min-width: 44px;
 }
