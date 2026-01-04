@@ -5,10 +5,17 @@
  * <script src="shared-head.js"></script>
  */
 
-// Add x-cloak style immediately to prevent flash of unstyled Alpine content
-const xCloakStyle = document.createElement("style");
-xCloakStyle.textContent = "[x-cloak] { display: none !important; }";
-document.head.appendChild(xCloakStyle);
+// CRITICAL: Add styles immediately to prevent flash of unstyled mobile menu
+const criticalStyles = document.createElement("style");
+criticalStyles.textContent = `
+  /* Hide Alpine x-cloak elements until initialized */
+  [x-cloak] { display: none !important; }
+  
+  /* Hide mobile menu by default - Alpine x-show will override when open */
+  .mobile-menu { display: none !important; }
+  .mobile-menu[style*="display: block"] { display: block !important; }
+`;
+document.head.insertBefore(criticalStyles, document.head.firstChild);
 
 // Tailwind Configuration - Shared across all pages
 tailwind.config = {
