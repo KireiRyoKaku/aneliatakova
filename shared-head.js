@@ -5,6 +5,11 @@
  * <script src="shared-head.js"></script>
  */
 
+// Add x-cloak style immediately to prevent flash of unstyled Alpine content
+const xCloakStyle = document.createElement("style");
+xCloakStyle.textContent = "[x-cloak] { display: none !important; }";
+document.head.appendChild(xCloakStyle);
+
 // Tailwind Configuration - Shared across all pages
 tailwind.config = {
   theme: {

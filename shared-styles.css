@@ -4,6 +4,11 @@
 
 /* This file is loaded via <link> tag and provides shared styles */
 
+/* Alpine.js x-cloak - hide elements until Alpine initializes */
+[x-cloak] {
+  display: none !important;
+}
+
 /* Base Styles */
 html {
   scroll-behavior: smooth;
