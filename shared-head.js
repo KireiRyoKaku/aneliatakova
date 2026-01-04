@@ -31,24 +31,40 @@ const sharedStyles = document.createElement("style");
 sharedStyles.setAttribute("type", "text/tailwindcss");
 sharedStyles.textContent = `
   @layer base {
-    html { scroll-behavior: smooth; }
-    body { @apply font-sans text-text-dark leading-relaxed; }
+    html { 
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+    body { 
+      @apply font-sans text-text-dark leading-relaxed;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* iOS Safari font fixes */
+    .font-signature {
+      font-family: 'Tangerine', cursive !important;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
   }
   @layer components {
     .btn-primary {
       @apply px-8 py-3 bg-secondary text-white rounded-full font-semibold 
              transition-all duration-300 hover:bg-red-700 hover:-translate-y-1 
              hover:shadow-lg inline-block;
+      -webkit-tap-highlight-color: transparent;
     }
     .btn-secondary {
       @apply px-8 py-3 border-2 border-white text-white rounded-full font-semibold 
              transition-all duration-300 hover:bg-white hover:text-primary 
              hover:-translate-y-1 inline-block;
+      -webkit-tap-highlight-color: transparent;
     }
     .btn-outline {
       @apply px-8 py-3 border-2 border-secondary text-secondary rounded-full font-semibold 
              transition-all duration-300 hover:bg-secondary hover:text-white 
              hover:-translate-y-1 inline-block;
+      -webkit-tap-highlight-color: transparent;
     }
     .section-title {
       @apply font-heading text-4xl md:text-5xl text-text-dark mb-4;
