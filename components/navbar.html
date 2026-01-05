@@ -2,7 +2,8 @@
 <nav
   x-data="{ scrolled: false, open: false, transparent: document.body.dataset.navTransparent === 'true' }"
   @scroll.window="scrolled = (window.scrollY > 50)"
-  :class="[scrolled || !transparent ? 'bg-white shadow-lg' : 'bg-transparent']"
+  :class="[scrolled || !transparent || open ? 'bg-white shadow-lg' : 'bg-transparent']"
+  :style="open ? 'background-color: #ffffff !important;' : ''"
   class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
 >
   <div class="max-w-7xl mx-auto px-5">
@@ -14,7 +15,7 @@
       <div class="flex-shrink-0">
         <a
           href="index.html"
-          :class="[scrolled || !transparent ? 'text-primary' : 'text-white']"
+          :class="[scrolled || !transparent || open ? 'text-primary' : 'text-white']"
           class="font-signature text-2xl md:text-4xl font-bold transition-colors duration-300"
         >
           Сън за тебе, сън за мене
@@ -81,15 +82,15 @@
         class="lg:hidden flex flex-col gap-1.5 cursor-pointer z-50"
       >
         <span
-          :class="[scrolled || !transparent ? 'bg-primary' : 'bg-white', open ? 'rotate-45 translate-y-2' : '']"
+          :class="[scrolled || !transparent || open ? 'bg-primary' : 'bg-white', open ? 'rotate-45 translate-y-2' : '']"
           class="w-6 h-0.5 transition-all duration-300"
         ></span>
         <span
-          :class="[scrolled || !transparent ? 'bg-primary' : 'bg-white', open ? 'opacity-0' : '']"
+          :class="[scrolled || !transparent || open ? 'bg-primary' : 'bg-white', open ? 'opacity-0' : '']"
           class="w-6 h-0.5 transition-all duration-300"
         ></span>
         <span
-          :class="[scrolled || !transparent ? 'bg-primary' : 'bg-white', open ? '-rotate-45 -translate-y-2' : '']"
+          :class="[scrolled || !transparent || open ? 'bg-primary' : 'bg-white', open ? '-rotate-45 -translate-y-2' : '']"
           class="w-6 h-0.5 transition-all duration-300"
         ></span>
       </button>
@@ -102,7 +103,8 @@
       x-transition:enter-start="opacity-0 -translate-y-4"
       x-transition:enter-end="opacity-100 translate-y-0"
       x-transition:leave="transition ease-in duration-200"
-      class="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg"
+      class="lg:hidden absolute top-full left-0 w-full shadow-lg"
+      style="background-color: #ffffff !important; -webkit-backface-visibility: hidden; backface-visibility: hidden;"
     >
       <ul class="flex flex-col items-center py-6 gap-6">
         <li>
