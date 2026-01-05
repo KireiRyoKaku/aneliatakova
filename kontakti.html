@@ -2,11 +2,18 @@
 <html lang="bg">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"
+    />
     <title>Контакти - Сън за тебе, сън за мене</title>
 
     <!-- Critical: Hide Alpine.js elements until ready -->
-    <style>[x-cloak] { display: none !important; }</style>
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
 
     <!-- CDN Dependencies -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -186,9 +193,23 @@
                     required
                     class="input-field"
                   >
+                    <option value="">Избери услуга...</option>
                     <option value="single">Единична консултация</option>
-                    <option value="free">Безплатна консултация</option>
-                    <option value="package">Пакет с проследяване</option>
+                    <option value="package-1week">
+                      Пакет: Фокус върху режима (1 седмица)
+                    </option>
+                    <option value="package-2weeks">
+                      Пакет: Режима и начина на заспиване (2 седмици)
+                    </option>
+                    <option value="package-full">
+                      Пълен пакет (4 седмици)
+                    </option>
+                    <option value="baby-welcome">
+                      Пакет "Добре дошло, бебе!"
+                    </option>
+                    <option value="free">
+                      Безплатна консултация (15 мин.)
+                    </option>
                   </select>
                 </div>
 
@@ -275,5 +296,33 @@
 
     <!-- Component Loader -->
     <script src="components.js"></script>
+
+    <!-- Pre-select Service from URL Parameter -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const service = urlParams.get("service");
+
+        // Pre-select the dropdown if service parameter exists
+        if (service) {
+          const selectElement = document.getElementById("subject");
+          if (selectElement) {
+            // Find and select the matching option
+            const option = selectElement.querySelector(
+              `option[value="${service}"]`
+            );
+            if (option) {
+              selectElement.value = service;
+              // Scroll to the form
+              selectElement.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }
+          }
+        }
+      });
+    </script>
   </body>
 </html>
