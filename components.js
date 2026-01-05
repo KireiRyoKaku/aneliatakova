@@ -110,16 +110,127 @@ function fixRelativePaths() {
   }, 150);
 }
 
+// Initialize Navbar - Vanilla JS (No Alpine)
+function initNavbar() {
+  const navbar = document.getElementById("navbar");
+  if (!navbar) return;
+
+  const navWrapper = document.getElementById("nav-wrapper");
+  const navLogo = document.getElementById("nav-logo");
+  const navLinks = navbar.querySelectorAll(".nav-link");
+  const hamburgerLines = navbar.querySelectorAll(".hamburger-line");
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+  // Check if page has transparent navbar
+  const isTransparent =
+    document.body && document.body.dataset.navTransparent === "true";
+  let isScrolled = false;
+  let isMenuOpen = false;
+
+  // Update navbar colors based on scroll and transparency
+  function updateNavbarColors() {
+    const shouldBeWhite = isScrolled || !isTransparent || isMenuOpen;
+
+    if (shouldBeWhite) {
+      navbar.classList.add("bg-white", "shadow-lg");
+      navbar.classList.remove("bg-transparent");
+      navLogo.classList.add("text-primary");
+      navLogo.classList.remove("text-white");
+      navLinks.forEach((link) => {
+        link.classList.add("text-text-dark");
+        link.classList.remove("text-white");
+      });
+      hamburgerLines.forEach((line) => {
+        line.classList.add("bg-primary");
+        line.classList.remove("bg-white");
+      });
+      navWrapper.classList.add("py-4");
+      navWrapper.classList.remove("py-5");
+    } else {
+      navbar.classList.remove("bg-white", "shadow-lg");
+      navbar.classList.add("bg-transparent");
+      navLogo.classList.remove("text-primary");
+      navLogo.classList.add("text-white");
+      navLinks.forEach((link) => {
+        link.classList.remove("text-text-dark");
+        link.classList.add("text-white");
+      });
+      hamburgerLines.forEach((line) => {
+        line.classList.remove("bg-primary");
+        line.classList.add("bg-white");
+      });
+      navWrapper.classList.remove("py-4");
+      navWrapper.classList.add("py-5");
+    }
+  }
+
+  // Handle scroll
+  function handleScroll() {
+    isScrolled = window.scrollY > 50;
+    updateNavbarColors();
+  }
+
+  // Toggle mobile menu
+  function toggleMobileMenu() {
+    isMenuOpen = !isMenuOpen;
+
+    if (isMenuOpen) {
+      // Show menu
+      mobileMenu.style.display = "block";
+      setTimeout(() => {
+        mobileMenu.style.opacity = "1";
+      }, 10);
+
+      // Animate hamburger
+      hamburgerLines[0].style.transform = "rotate(45deg) translateY(8px)";
+      hamburgerLines[1].style.opacity = "0";
+      hamburgerLines[2].style.transform = "rotate(-45deg) translateY(-8px)";
+    } else {
+      // Hide menu
+      mobileMenu.style.opacity = "0";
+      setTimeout(() => {
+        mobileMenu.style.display = "none";
+      }, 200);
+
+      // Reset hamburger
+      hamburgerLines[0].style.transform = "";
+      hamburgerLines[1].style.opacity = "1";
+      hamburgerLines[2].style.transform = "";
+    }
+
+    updateNavbarColors();
+  }
+
+  // Close menu when clicking a link
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isMenuOpen) {
+        toggleMobileMenu();
+      }
+    });
+  });
+
+  // Event listeners
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  mobileMenuButton.addEventListener("click", toggleMobileMenu);
+
+  // Initial state
+  updateNavbarColors();
+}
+
 // Initialize components when DOM is ready
 document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("navbar-placeholder", "components/navbar.html");
   await loadComponent("footer-placeholder", "components/footer.html");
 
-  // Wait a moment for navbar script to initialize
+  // Initialize navbar after it's loaded
   setTimeout(() => {
+    initNavbar();
     setActiveNavLink();
     fixRelativePaths();
-  }, 50);
+  }, 100);
 
   // Load Calendly widget
   // Add CSS

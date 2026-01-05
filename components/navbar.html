@@ -1,7 +1,13 @@
 <!-- Reusable Navbar Component - Pure Vanilla JS (No Alpine) -->
-<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+>
   <div class="max-w-7xl mx-auto px-5">
-    <div class="flex justify-between items-center py-5 transition-all duration-300" id="nav-wrapper">
+    <div
+      class="flex justify-between items-center py-5 transition-all duration-300"
+      id="nav-wrapper"
+    >
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a
@@ -68,9 +74,15 @@
         class="lg:hidden flex flex-col gap-1.5 cursor-pointer z-50"
         aria-label="Toggle menu"
       >
-        <span class="hamburger-line w-6 h-0.5 transition-all duration-300"></span>
-        <span class="hamburger-line w-6 h-0.5 transition-all duration-300"></span>
-        <span class="hamburger-line w-6 h-0.5 transition-all duration-300"></span>
+        <span
+          class="hamburger-line w-6 h-0.5 transition-all duration-300"
+        ></span>
+        <span
+          class="hamburger-line w-6 h-0.5 transition-all duration-300"
+        ></span>
+        <span
+          class="hamburger-line w-6 h-0.5 transition-all duration-300"
+        ></span>
       </button>
     </div>
 
@@ -78,142 +90,50 @@
     <div
       id="mobile-menu"
       class="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-opacity duration-200"
-      style="display: none; opacity: 0;"
+      style="display: none; opacity: 0"
     >
       <ul class="flex flex-col items-center py-6 gap-6">
         <li>
-          <a href="index.html" data-nav-link class="text-text-dark font-medium uppercase">Начало</a>
+          <a
+            href="index.html"
+            data-nav-link
+            class="text-text-dark font-medium uppercase"
+            >Начало</a
+          >
         </li>
         <li>
-          <a href="za-men.html" data-nav-link class="text-text-dark font-medium uppercase">За мен</a>
+          <a
+            href="za-men.html"
+            data-nav-link
+            class="text-text-dark font-medium uppercase"
+            >За мен</a
+          >
         </li>
         <li>
-          <a href="konsultacii.html" data-nav-link class="text-text-dark font-medium uppercase">Консултации</a>
+          <a
+            href="konsultacii.html"
+            data-nav-link
+            class="text-text-dark font-medium uppercase"
+            >Консултации</a
+          >
         </li>
         <li>
-          <a href="blog/index.html" data-nav-link class="text-text-dark font-medium uppercase">Блог</a>
+          <a
+            href="blog/index.html"
+            data-nav-link
+            class="text-text-dark font-medium uppercase"
+            >Блог</a
+          >
         </li>
         <li>
-          <a href="kontakti.html" data-nav-link class="text-text-dark font-medium uppercase">Контакти</a>
+          <a
+            href="kontakti.html"
+            data-nav-link
+            class="text-text-dark font-medium uppercase"
+            >Контакти</a
+          >
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-<script>
-(function() {
-  // Wait for DOM to be ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNavbar);
-  } else {
-    initNavbar();
-  }
-
-  function initNavbar() {
-    const navbar = document.getElementById('navbar');
-    const navWrapper = document.getElementById('nav-wrapper');
-    const navLogo = document.getElementById('nav-logo');
-    const navLinks = navbar.querySelectorAll('.nav-link');
-    const hamburgerLines = navbar.querySelectorAll('.hamburger-line');
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    
-    // Check if page has transparent navbar
-    const isTransparent = document.body && document.body.dataset.navTransparent === 'true';
-    let isScrolled = false;
-    let isMenuOpen = false;
-
-    // Update navbar colors based on scroll and transparency
-    function updateNavbarColors() {
-      const shouldBeWhite = isScrolled || !isTransparent || isMenuOpen;
-      
-      if (shouldBeWhite) {
-        navbar.classList.add('bg-white', 'shadow-lg');
-        navbar.classList.remove('bg-transparent');
-        navLogo.classList.add('text-primary');
-        navLogo.classList.remove('text-white');
-        navLinks.forEach(link => {
-          link.classList.add('text-text-dark');
-          link.classList.remove('text-white');
-        });
-        hamburgerLines.forEach(line => {
-          line.classList.add('bg-primary');
-          line.classList.remove('bg-white');
-        });
-        navWrapper.classList.add('py-4');
-        navWrapper.classList.remove('py-5');
-      } else {
-        navbar.classList.remove('bg-white', 'shadow-lg');
-        navbar.classList.add('bg-transparent');
-        navLogo.classList.remove('text-primary');
-        navLogo.classList.add('text-white');
-        navLinks.forEach(link => {
-          link.classList.remove('text-text-dark');
-          link.classList.add('text-white');
-        });
-        hamburgerLines.forEach(line => {
-          line.classList.remove('bg-primary');
-          line.classList.add('bg-white');
-        });
-        navWrapper.classList.remove('py-4');
-        navWrapper.classList.add('py-5');
-      }
-    }
-
-    // Handle scroll
-    function handleScroll() {
-      isScrolled = window.scrollY > 50;
-      updateNavbarColors();
-    }
-
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-      isMenuOpen = !isMenuOpen;
-      
-      if (isMenuOpen) {
-        // Show menu
-        mobileMenu.style.display = 'block';
-        setTimeout(() => {
-          mobileMenu.style.opacity = '1';
-        }, 10);
-        
-        // Animate hamburger
-        hamburgerLines[0].style.transform = 'rotate(45deg) translateY(8px)';
-        hamburgerLines[1].style.opacity = '0';
-        hamburgerLines[2].style.transform = 'rotate(-45deg) translateY(-8px)';
-      } else {
-        // Hide menu
-        mobileMenu.style.opacity = '0';
-        setTimeout(() => {
-          mobileMenu.style.display = 'none';
-        }, 200);
-        
-        // Reset hamburger
-        hamburgerLines[0].style.transform = '';
-        hamburgerLines[1].style.opacity = '1';
-        hamburgerLines[2].style.transform = '';
-      }
-      
-      updateNavbarColors();
-    }
-
-    // Close menu when clicking a link
-    mobileMenuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (isMenuOpen) {
-          toggleMobileMenu();
-        }
-      });
-    });
-
-    // Event listeners
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    mobileMenuButton.addEventListener('click', toggleMobileMenu);
-
-    // Initial state
-    updateNavbarColors();
-  }
-})();
-</script>
