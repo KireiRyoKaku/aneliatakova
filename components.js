@@ -115,36 +115,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("navbar-placeholder", "components/navbar.html");
   await loadComponent("footer-placeholder", "components/footer.html");
 
-  // Re-initialize Alpine for dynamically loaded components
-  // Use a longer delay for iOS Safari to ensure proper initialization
-  const reinitAlpine = () => {
-    if (window.Alpine) {
-      document.querySelectorAll("nav[x-data]").forEach((el) => {
-        // Ensure open state is false before Alpine initializes
-        const mobileMenu = el.querySelector('[x-show="open"]');
-        if (mobileMenu) {
-          mobileMenu.style.display = "none";
-        }
-        Alpine.initTree(el);
-      });
-    }
-  };
-
-  // Try immediate initialization
-  reinitAlpine();
-
-  // iOS Safari fallback - reinit after Alpine fully loads
-  if (window.Alpine) {
-    setTimeout(reinitAlpine, 100);
-  } else {
-    // Wait for Alpine to load
-    document.addEventListener("alpine:init", () => {
-      setTimeout(reinitAlpine, 50);
-    });
-  }
-
-  setActiveNavLink();
-  fixRelativePaths();
+  // Wait a moment for navbar script to initialize
+  setTimeout(() => {
+    setActiveNavLink();
+    fixRelativePaths();
+  }, 50);
 
   // Load Calendly widget
   // Add CSS
