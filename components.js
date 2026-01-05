@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Ensure open state is false before Alpine initializes
         const mobileMenu = el.querySelector('[x-show="open"]');
         if (mobileMenu) {
-          mobileMenu.style.display = 'none';
+          mobileMenu.style.display = "none";
         }
         Alpine.initTree(el);
       });
@@ -132,13 +132,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Try immediate initialization
   reinitAlpine();
-  
+
   // iOS Safari fallback - reinit after Alpine fully loads
   if (window.Alpine) {
     setTimeout(reinitAlpine, 100);
   } else {
     // Wait for Alpine to load
-    document.addEventListener('alpine:init', () => {
+    document.addEventListener("alpine:init", () => {
       setTimeout(reinitAlpine, 50);
     });
   }
