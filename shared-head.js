@@ -31,6 +31,8 @@ const sharedStyles = document.createElement("style");
 sharedStyles.setAttribute("type", "text/tailwindcss");
 sharedStyles.textContent = `
   @layer base {
+    /* Hide Alpine.js elements until ready - CRITICAL for iOS Safari */
+    [x-cloak] { display: none !important; }
     html { 
       scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;

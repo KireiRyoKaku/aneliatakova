@@ -7,17 +7,6 @@
   box-sizing: border-box;
 }
 
-/* iOS Safari Mobile Menu Fix */
-@supports (-webkit-touch-callout: none) {
-  /* iOS only styles */
-  .lg\:hidden[x-show] {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-}
-
 :root {
   /* Colors - New Palette */
   --primary-color: #f4acb7;
