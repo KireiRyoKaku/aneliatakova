@@ -250,13 +250,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       font-size: 14px !important;
       padding: 10px 16px !important;
       border-radius: 50px !important;
-      box-shadow: 0 4px 15px rgba(196, 50, 33, 0.4) !important;
+      box-shadow: 0 4px 15px ${window.COLORS.secondary}66 !important;
       transform: scale(1);
       transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     }
     .calendly-badge-widget .calendly-badge-content:hover {
       transform: scale(1.05) !important;
-      box-shadow: 0 6px 20px rgba(196, 50, 33, 0.5) !important;
+      box-shadow: 0 6px 20px ${window.COLORS.secondary}80 !important;
     }
     @media (min-width: 768px) {
       .calendly-badge-widget {
@@ -278,8 +278,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     Calendly.initBadgeWidget({
       url: "https://calendly.com/sunzatebe/15min?hide_gdpr_banner=1",
       text: "Да се запознаем!",
-      color: "#f4acb7",
-      textColor: "#c03221",
+      color: window.COLORS.accent,
+      textColor: window.COLORS.backgroundLight,
       branding: false,
     });
   };
