@@ -50,31 +50,31 @@
 // };
 
 // TEST 4: Natural Professional ■ #8B9B7E ■ #D4C4B0 ■ #6B5244 ■ #5A6B4E
-// const COLORS = {
-//   primary: "#8B9B7E", // ■ Sage Olive
-//   secondary: "#D4C4B0", // ■ Warm Beige
-//   accent: "#6B5244", // ■ Warm Brown
-//   accentDark: "#5A6B4E", // ■ Forest Green
-//   textDark: "#3A3230", // ■ Deep Brown
-//   textLight: "#8B7E76", // ■ Warm Gray
-//   backgroundLight: "#F5F1EB", // ■ Soft Cream
-//   backgroundGray: "#E8E0D5", // ■ Warm Sand
-//   borderColor: "#C9BFB3", // ■ Light Taupe
-// };
+const COLORS = {
+  primary: "#8B9B7E", // ■ Sage Olive
+  secondary: "#f4a8b8", // ■ Dusty Rose
+  accent: "#d4a5a5", // ■ Pink
+  accentDark: "#5A6B4E", // ■ Forest Green
+  textDark: "#3A3230", // ■ Deep Brown
+  textLight: "#8B7E76", // ■ Warm Gray
+  backgroundLight: "#F5F1EB", // ■ Soft Cream
+  backgroundGray: "#E8E0D5", // ■ Warm Sand
+  borderColor: "#C9BFB3", // ■ Light Taupe
+};
 
 // TEST 5: Social Media Modern ■ #5B7FA6 ■ #7B9DC4 ■ #F5A64A ■ #2C4B82
 // Inspired by modern grid aesthetics - denim blue, medium blue, golden orange
-const COLORS = {
-  primary: "#5B7FA6", // ■ Denim Blue
-  secondary: "#7B9DC4", // ■ Medium Blue (darker for legibility)
-  accent: "#F5A64A", // ■ Golden Orange
-  accentDark: "#2C4B82", // ■ Navy Blue
-  textDark: "#2B3A4A", // ■ Dark Slate
-  textLight: "#6B7F95", // ■ Blue Gray
-  backgroundLight: "#F8FAFB", // ■ Off White
-  backgroundGray: "#E8EEF3", // ■ Light Blue Gray
-  borderColor: "#D1DDEA", // ■ Soft Blue
-};
+// const COLORS = {
+//   primary: "#5B7FA6", // ■ Denim Blue
+//   secondary: "#7B9DC4", // ■ Medium Blue (darker for legibility)
+//   accent: "#F5A64A", // ■ Golden Orange
+//   accentDark: "#2C4B82", // ■ Navy Blue
+//   textDark: "#2B3A4A", // ■ Dark Slate
+//   textLight: "#6B7F95", // ■ Blue Gray
+//   backgroundLight: "#F8FAFB", // ■ Off White
+//   backgroundGray: "#E8EEF3", // ■ Light Blue Gray
+//   borderColor: "#D1DDEA", // ■ Soft Blue
+// };
 
 // Make COLORS globally accessible for components.js and other scripts
 window.COLORS = COLORS;
