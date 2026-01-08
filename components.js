@@ -92,6 +92,15 @@ function fixRelativePaths() {
         }
       });
 
+    // Fix logo image path
+    const logoImg = document.getElementById("nav-logo-img");
+    if (logoImg) {
+      const logoSrc = logoImg.getAttribute("src");
+      if (logoSrc && logoSrc.startsWith("assets/")) {
+        logoImg.setAttribute("src", basePath + logoSrc);
+      }
+    }
+
     // Fix footer links
     document
       .querySelectorAll(
