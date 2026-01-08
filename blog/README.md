@@ -26,6 +26,7 @@ blog/
 ## 📝 How to Add New Blog Posts
 
 ### Method 1: Copy Existing Post
+
 1. Copy `blog/post-1.html` to `blog/post-4.html`
 2. Update the content:
    - Change `<title>` tag
@@ -37,6 +38,7 @@ blog/
    - Update related posts links
 
 ### Method 2: Use the Template
+
 1. Copy `blog/blog-template.html`
 2. Rename it (e.g., `post-4.html`)
 3. Find and replace all `[PLACEHOLDERS]`:
@@ -49,7 +51,9 @@ blog/
 4. Write your content in the post-content section
 
 ### Method 3: Link from Homepage
+
 After creating a new post, update `index.html`:
+
 ```html
 <a href="blog/post-4.html" class="blog-link">Прочети повече</a>
 ```
@@ -57,12 +61,15 @@ After creating a new post, update `index.html`:
 ## 🚀 Alternative Approaches for Future
 
 ### Option 1: Jekyll (Recommended for scaling)
+
 If you plan to write many blog posts, consider Jekyll:
 
 **Setup:**
+
 1. Create `_config.yml`:
+
 ```yaml
-title: Анелия Такова - Сън за тебе, сън за мене
+title: Анелия Такова - Сън за тебе
 description: Консултант по детски сън
 baseurl: ""
 url: "https://yourusername.github.io"
@@ -71,6 +78,7 @@ url: "https://yourusername.github.io"
 2. Create `_posts` folder
 3. Add posts as: `_posts/2025-11-08-title.md`
 4. Use Markdown for content:
+
 ```markdown
 ---
 layout: post
@@ -86,7 +94,9 @@ Your content here...
 **Cons:** Requires learning Jekyll, restructuring site
 
 ### Option 2: Headless CMS
+
 Use services like:
+
 - **Netlify CMS** - Free, works with GitHub
 - **Forestry.io** - Visual editor
 - **Contentful** - Powerful but complex
@@ -95,6 +105,7 @@ Use services like:
 **Cons:** Additional setup, external dependency
 
 ### Option 3: JavaScript Static Site Generator
+
 - **11ty (Eleventy)** - Flexible, JavaScript-based
 - **Gatsby** - React-based, powerful
 - **Next.js** - Modern, great for blogs
@@ -105,6 +116,7 @@ Use services like:
 ## 📊 Current Recommendation
 
 **Stick with static HTML for now** because:
+
 1. ✅ You have 3 posts - easy to manage
 2. ✅ GitHub Pages works immediately
 3. ✅ Full control over design
@@ -112,6 +124,7 @@ Use services like:
 5. ✅ Easy to update
 
 **When to consider alternatives:**
+
 - You have 10+ blog posts
 - You're posting weekly
 - Multiple authors need access
@@ -120,6 +133,7 @@ Use services like:
 ## 🎨 Blog Features Included
 
 ### Current Features:
+
 - ✅ Responsive design
 - ✅ Featured images
 - ✅ Reading time estimate
@@ -132,6 +146,7 @@ Use services like:
 - ✅ SEO-friendly structure
 
 ### Easy to Add:
+
 - Comments (Disqus, Facebook Comments)
 - Search functionality
 - Tags/categories page
@@ -141,6 +156,7 @@ Use services like:
 ## 📱 SEO Tips
 
 Each blog post includes:
+
 - Title tag
 - Meta description
 - Proper heading hierarchy (H1, H2, H3)
@@ -148,6 +164,7 @@ Each blog post includes:
 - Semantic HTML
 
 **To improve:**
+
 1. Add structured data (JSON-LD)
 2. Create sitemap.xml
 3. Add Open Graph tags for social sharing

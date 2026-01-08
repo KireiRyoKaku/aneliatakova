@@ -1,4 +1,4 @@
-# Анелия Такова - Сън за тебе, сън за мене
+# Анелия Такова - Сън за тебе
 
 Професионален уебсайт за консултант по детски сън с модерен, чист и приятен дизайн. Изграден с HTML, CSS и vanilla JavaScript.
 
@@ -28,6 +28,7 @@
 ## 🎨 Дизайн особености
 
 - **Цветова палитра**:
+
   - Основен: #F4ACB7 (Розово)
   - Вторичен: #C03221 (Червено)
   - Акцент: #9CB380 (Зелено)
@@ -46,12 +47,14 @@
 1. **Clone or download this repository**
 
 2. **Add your images** to `assets/images/` folder:
+
    - `profile.jpg` - Your profile photo
    - `blog-1.jpg` - First blog post image
    - `blog-2.jpg` - Second blog post image
    - `blog-3.jpg` - Third blog post image
 
 3. **Customize the content**:
+
    - Update personal information in `index.html`
    - Edit blog posts in `blog/` folder
    - Update contact information and social links
@@ -70,16 +73,18 @@ Your website includes a fully functional blog system:
 - **🎨 Custom Styles** - Blog-specific styling in `blog/blog-style.css`
 
 **To add a new blog post:**
+
 1. Copy `blog/blog-template.html`
 2. Rename to `blog/post-4.html`
 3. Update content and images
 4. Link from `index.html` blog section
 
-**📖 Read more:** 
+**📖 Read more:**
+
 - `BLOG-SUMMARY.md` - Blog implementation overview
 - `blog/README.md` - Detailed blog management guide
-   - Modify text, services, and blog posts
-   - Add your email, phone, and social media links
+  - Modify text, services, and blog posts
+  - Add your email, phone, and social media links
 
 4. **Open the website**:
    - Simply open `index.html` in a web browser
@@ -88,10 +93,12 @@ Your website includes a fully functional blog system:
 ## 🌐 Running Locally
 
 ### Option 1: Direct File Open
+
 - Navigate to the project folder
 - Double-click `index.html`
 
 ### Option 2: Using Python Server
+
 ```bash
 # Python 3
 python -m http.server 8000
@@ -100,13 +107,16 @@ python -m http.server 8000
 ```
 
 ### Option 3: Using VS Code Live Server
+
 - Install "Live Server" extension in VS Code
 - Right-click `index.html` and select "Open with Live Server"
 
 ## 📝 Персонализация
 
 ### Актуализиране на лична информация
+
 Редактирай следното в `index.html`:
+
 - Име и титла в hero секцията
 - Текст за мен и статистики
 - Описания на услугите
@@ -115,17 +125,20 @@ python -m http.server 8000
 - Връзки към социални медии
 
 ### Промяна на цветове
+
 Промени CSS променливите в `styles.css`:
+
 ```css
 :root {
-    --primary-color: #F4ACB7;
-    --secondary-color: #C03221;
-    --accent-color: #9CB380;
-    --accent-dark: #3E363F;
+  --primary-color: #f4acb7;
+  --secondary-color: #c03221;
+  --accent-color: #9cb380;
+  --accent-dark: #3e363f;
 }
 ```
 
 ### Коригиране на секции
+
 - Добави/премахни карти с услуги в секцията услуги
 - Промени блог статиите
 - Актуализирай полетата на контактната форма
@@ -149,6 +162,7 @@ python -m http.server 8000
 ## 📧 Контактна форма
 
 Контактната форма в момента показва alert при изпращане. За да я направите функционална:
+
 1. Интегрирайте с backend услуга (Node.js, PHP, и т.н.)
 2. Използвайте форма услуга като Formspree, Netlify Forms, или EmailJS
 3. Добавете правилна валидация и функционалност за изпращане на имейли
