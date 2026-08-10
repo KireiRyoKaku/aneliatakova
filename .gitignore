@@ -42,3 +42,5 @@ build/
 # Backup files
 *.bak
 *.backup
+
+recaptcha.txt
