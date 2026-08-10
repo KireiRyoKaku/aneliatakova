@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bg">
   <head>
     <meta charset="UTF-8" />
@@ -31,6 +31,22 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "M5kZm_hLD6AJ8afDa",
+        });
+      })();
+    </script>
+
+    <!-- Google reCAPTCHA v2 API Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Shared Config -->
     <script src="shared-head.js"></script>
@@ -137,9 +153,56 @@
           <div>
             <div class="bg-gray-50 p-8 rounded-2xl">
               <h2 class="font-heading text-2xl mb-6">Изпрати съобщение</h2>
+
               <form
-                x-data="{ submitted: false }"
-                @submit.prevent="submitted = true"
+                id="contact-form"
+                x-data="{
+                  loading: false,
+                  submitted: false,
+                  error: false,
+                  init() {
+                    // Global callbacks for invisible reCAPTCHA
+                    window.onCaptchaSuccess = (token) => {
+                      this.sendEmail();
+                    };
+                    window.onCaptchaError = () => {
+                      this.loading = false;
+                      this.error = true;
+                    };
+                  },
+                  handleSubmit() {
+                    this.loading = true;
+                    this.error = false;
+                    this.submitted = false;
+
+                    if (typeof grecaptcha !== 'undefined') {
+                      grecaptcha.execute();
+                    } else {
+                      this.loading = false;
+                      this.error = true;
+                    }
+                  },
+                  sendEmail() {
+                    emailjs.sendForm('service_yghssqp', 'template_24vlfl6', this.$el)
+                      .then(() => {
+                        this.loading = false;
+                        this.submitted = true;
+                        this.$el.reset();
+                        if (typeof grecaptcha !== 'undefined' && grecaptcha.reset) {
+                          grecaptcha.reset();
+                        }
+                      })
+                      .catch((err) => {
+                        this.loading = false;
+                        this.error = true;
+                        if (typeof grecaptcha !== 'undefined' && grecaptcha.reset) {
+                          grecaptcha.reset();
+                        }
+                        console.error('EmailJS Error:', err);
+                      });
+                  }
+                }"
+                @submit.prevent="handleSubmit()"
                 class="space-y-5"
               >
                 <div>
@@ -194,20 +257,24 @@
                     class="input-field"
                   >
                     <option value="">Избери услуга...</option>
-                    <option value="single">Единична консултация</option>
-                    <option value="package-1week">
+                    <option value="Единична консултация">
+                      Единична консултация
+                    </option>
+                    <option value="Пакет: Фокус върху режима (1 седмица)">
                       Пакет: Фокус върху режима (1 седмица)
                     </option>
-                    <option value="package-2weeks">
+                    <option
+                      value="Пакет: Режима и начина на заспиване (2 седмици)"
+                    >
                       Пакет: Режима и начина на заспиване (2 седмици)
                     </option>
-                    <option value="package-full">
+                    <option value="Пълен пакет (4 седмици)">
                       Пълен пакет (4 седмици)
                     </option>
-                    <option value="baby-welcome">
+                    <option value="Пакет 'Добре дошло, бебе!'">
                       Пакет "Добре дошло, бебе!"
                     </option>
-                    <option value="free">
+                    <option value="Безплатна консултация (15 мин.)">
                       Безплатна консултация (15 мин.)
                     </option>
                   </select>
@@ -227,18 +294,56 @@
                   ></textarea>
                 </div>
 
-                <button type="submit" class="btn-primary w-full text-center">
-                  Изпрати съобщение
+                <!-- Invisible reCAPTCHA Badge Element -->
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6Ldmpn8tAAAAAHhR8kJuTEIKqz9greGQgQ_eFGjY"
+                  data-callback="onCaptchaSuccess"
+                  data-error-callback="onCaptchaError"
+                  data-size="invisible"
+                ></div>
+
+                <button
+                  type="submit"
+                  class="btn-primary w-full text-center flex items-center justify-center gap-2"
+                  :disabled="loading"
+                >
+                  <span x-show="!loading">Изпрати съобщение</span>
+                  <span
+                    x-show="loading"
+                    x-cloak
+                    class="flex items-center gap-2"
+                  >
+                    <i class="fas fa-spinner fa-spin"></i> Изпращане...
+                  </span>
                 </button>
 
+                <!-- Success Feedback -->
                 <div
                   x-show="submitted"
                   x-transition
+                  x-cloak
                   class="bg-accent/20 text-accent-dark p-4 rounded-lg text-center"
                 >
                   <i class="fas fa-check-circle text-accent text-2xl mb-2"></i>
                   <p class="font-semibold">Благодаря за съобщението!</p>
                   <p class="text-sm">Ще се свържа с теб скоро.</p>
+                </div>
+
+                <!-- Error Feedback -->
+                <div
+                  x-show="error"
+                  x-transition
+                  x-cloak
+                  class="bg-red-100 text-red-700 p-4 rounded-lg text-center"
+                >
+                  <i
+                    class="fas fa-exclamation-circle text-red-500 text-2xl mb-2"
+                  ></i>
+                  <p class="font-semibold">Възникна грешка!</p>
+                  <p class="text-sm">
+                    Моля, опитай отново или се свържи с мен по телефона.
+                  </p>
                 </div>
               </form>
             </div>
@@ -300,21 +405,17 @@
     <!-- Pre-select Service from URL Parameter -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Get URL parameter
         const urlParams = new URLSearchParams(window.location.search);
         const service = urlParams.get("service");
 
-        // Pre-select the dropdown if service parameter exists
         if (service) {
           const selectElement = document.getElementById("subject");
           if (selectElement) {
-            // Find and select the matching option
             const option = selectElement.querySelector(
-              `option[value="${service}"]`
+              `option[value="${service}"]`,
             );
             if (option) {
               selectElement.value = service;
-              // Scroll to the form
               selectElement.scrollIntoView({
                 behavior: "smooth",
                 block: "center",
