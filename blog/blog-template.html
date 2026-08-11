@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bg">
   <head>
     <meta charset="UTF-8" />
@@ -128,7 +128,7 @@
         <!-- Author Box -->
         <div class="author-box">
           <div class="author-image">
-            <img src="../assets/images/profile.jpg" alt="Анелия Такова" />
+            <img src="../assets/images/heroimage.jpg" alt="Анелия Такова" />
           </div>
           <div class="author-info">
             <h4>Анелия Такова</h4>
@@ -175,7 +175,12 @@
           </p>
           <a
             href="#"
-            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sunzatebe/15min?hide_gdpr_banner=1'});return false;"
+            onclick="
+              Calendly.initPopupWidget({
+                url: 'https://calendly.com/sunzatebe/15min?hide_gdpr_banner=1',
+              });
+              return false;
+            "
             class="btn btn-primary"
             >Свържи се с мен</a
           >
