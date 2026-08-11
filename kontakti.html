@@ -50,7 +50,22 @@
 
     <!-- Shared Config -->
     <script src="shared-head.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-14D1EG2JKX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-14D1EG2JKX");
+    </script>
   </head>
+
   <body>
     <!-- Navbar Component (solid background for inner pages) -->
     <div id="navbar-placeholder"></div>

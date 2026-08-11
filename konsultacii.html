@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bg">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,22 @@
 
     <!-- Shared Config -->
     <script src="shared-head.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-14D1EG2JKX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-14D1EG2JKX");
+    </script>
   </head>
+
   <body>
     <!-- Navbar Component -->
     <div id="navbar-placeholder"></div>
@@ -42,10 +57,10 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-12 bg-gray-50">
       <div class="max-w-6xl mx-auto px-5 text-center">
-        <span class="section-label">Как мога да помогна</span>
+        <!-- <span class="section-label">Как мога да помогна</span> -->
         <h1 class="section-title">Консултации по детски сън</h1>
         <p class="text-text-light text-lg max-w-2xl mx-auto">
-          Какво включват различните видове консултации по детски сън и кога са
+          Какво включват различните консултации по детски сън и кога са
           подходящи?
         </p>
       </div>
@@ -57,18 +72,17 @@
         class="max-w-3xl mx-auto px-5 text-center space-y-4 text-text-light italic"
       >
         <p>
-          В зависимост от твоята индивидуална ситуация и необходимост можеш да
-          избираш между единична консултация или консултация в пакет с
-          последваща подкрепа в рамките на 1 до 4 седмици след това.
+          Можеш да избираш между единична консултация или консултация в пакет с
+          последваща подкрепа от 1 до 4 седмици след това.
         </p>
-        <p>
+        <!-- <p>
           Не си сигурен кой вариант да избереш и дали изобщо консултации по
           детски сън ще бъдат полезни в твоя случай?
         </p>
         <p class="font-semibold text-text-dark not-italic">
           Възползвай се от възможността за 15-минутен безплатен разговор с мен,
           в който да обсъдим проблема и как мога да съм полезна.
-        </p>
+        </p> -->
       </div>
     </section>
 
@@ -95,7 +109,7 @@
                 <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
                 <span
                   >Си мотивиран/а да работиш самостоятелно над проблема и желаеш
-                  ясни насоки за подобряване</span
+                  ясни насоки за действие</span
                 >
               </li>
               <li class="flex items-start gap-2">
@@ -120,7 +134,7 @@
                 <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
                 <span
                   >индивидуални ресурси след срещата: запис, индивидуален
-                  примерен режим, кратко писмено обобщение с насоки</span
+                  примерен режим, писмени насоки</span
                 >
               </li>
             </ul>
@@ -150,7 +164,7 @@
                     </span>
                     <div class="flex flex-col sm:items-end">
                       <span class="font-bold text-secondary text-lg">55 €</span>
-                      <span class="text-xs text-text-light">107,56 лв</span>
+                      <!-- <span class="text-xs text-text-light">107,56 лв</span> -->
                     </div>
                   </div>
                 </div>
@@ -185,9 +199,8 @@
               Подходяща когато:
             </p>
             <p class="text-text-light mb-4 text-sm">
-              трудностите със съня не са отскоро, не знаеш дали ще се справиш
-              сам/а с тях и имаш нужда освен от ясни насоки и от допълнителна
-              подкрепа и подход, за да подобриш ситуацията трайно и ефективно
+              трудностите със съня не са отскоро и имаш нужда от ясни насоки и
+              от подкрепа и подход, за да подобриш ситуацията трайно и ефективно
             </p>
             <ul class="space-y-1.5 text-text-light mb-4 flex-1 text-xs">
               <li class="flex items-start gap-2">
@@ -244,7 +257,7 @@
                       <span class="font-bold text-secondary text-base"
                         >95 €</span
                       >
-                      <span class="text-xs text-text-light">185,79 лв</span>
+                      <!-- <span class="text-xs text-text-light">185,79 лв</span> -->
                     </div>
                   </div>
                   <span class="text-base text-text-light italic"
@@ -289,7 +302,7 @@
                       <span class="font-bold text-secondary text-base"
                         >135 €</span
                       >
-                      <span class="text-xs text-text-light">264,04 лв</span>
+                      <!-- <span class="text-xs text-text-light">264,04 лв</span> -->
                     </div>
                   </div>
                   <span class="text-base text-text-light italic"
@@ -303,7 +316,7 @@
                 <input
                   type="radio"
                   name="package-option"
-                  value="package-full"
+                  value="Пълен пакет (4 седмици)"
                   class="hidden package-radio"
                   checked
                 />
@@ -320,7 +333,7 @@
                       <span class="font-bold text-secondary text-lg"
                         >215 €</span
                       >
-                      <span class="text-xs text-text-light">420,48 лв</span>
+                      <!-- <span class="text-xs text-text-light">420,48 лв</span> -->
                     </div>
                   </div>
                   <span class="text-base text-text-light italic"
@@ -350,17 +363,17 @@
               Пакет "Добре дошло, бебе!"
             </h3>
             <p class="text-text-light mb-3 font-semibold text-sm">
-              Подходящ за:
+              Подходящ като:
             </p>
             <p class="text-text-light mb-8 text-sm">
-              Родители в очакване и тези с новородено бебе, които желаят добри
-              основи и реалистични очаквания за съня.
+              подарък за родители в очакване или с новородено бебе, за да
+              придобият добра основа за детския сън още в началото.
             </p>
             <ul class="space-y-8 text-text-light mb-4 flex-1 text-sm">
               <li class="flex items-start gap-2">
                 <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
                 <span
-                  >40-минутен разговор<span
+                  >40-минутна консултация<span
                     class="relative inline-block ml-0.5 cursor-help group"
                     ><span class="text-secondary font-bold">*</span
                     ><span
@@ -383,10 +396,10 @@
                 <i class="fas fa-check text-accent mt-1 flex-shrink-0"></i>
                 <span>10% отстъпка за следващи консултации</span>
               </li>
-              <li class="flex items-start gap-2">
+              <!-- <li class="flex items-start gap-2">
                 <i class="fas fa-gift text-primary mt-1 flex-shrink-0"></i>
                 <span>Може да бъде оформен като подарък</span>
-              </li>
+              </li> -->
             </ul>
             <div class="mt-auto">
               <div class="border-t border-gray-200 pt-4 mb-4">
@@ -401,7 +414,7 @@
                       <span class="font-bold text-secondary text-lg"
                         >110 €</span
                       >
-                      <span class="text-xs text-text-light">215,13 лв</span>
+                      <!-- <span class="text-xs text-text-light">215,13 лв</span> -->
                     </div>
                   </div>
                 </div>
@@ -431,9 +444,10 @@
                 Безплатен разговор
               </h3>
               <p class="text-text-light">
-                15-минутна запознавателна среща за обсъждане на
-                предизвикателствата и дали консултациите по сън са подходящи за
-                твоя случай.
+                Не си сигурен кой вариант да избереш и дали изобщо консултации
+                по детски сън ще бъдат полезни в твоя случай? Възползвай се от
+                възможността за 15-минутен безплатен разговор с мен, в който да
+                обсъдим проблема и как мога да съм полезна.
               </p>
             </div>
           </div>
@@ -443,7 +457,12 @@
             <p class="text-2xl font-bold text-accent">Безплатно</p>
             <a
               href="#"
-              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sunzatebe/15min?hide_gdpr_banner=1'});return false;"
+              onclick="
+                Calendly.initPopupWidget({
+                  url: 'https://calendly.com/sunzatebe/15min?hide_gdpr_banner=1',
+                });
+                return false;
+              "
               class="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-full inline-block transition-colors duration-300 whitespace-nowrap w-full sm:w-auto text-center"
             >
               Запази безплатен разговор
@@ -480,8 +499,8 @@
           <div class="bg-gray-50 p-6 rounded-2xl text-center">
             <p class="text-text-light mb-2">Кратка консултация (30-60 мин.)</p>
             <p class="text-2xl font-bold text-secondary">
-              23,00 €
-              <span class="text-lg font-normal text-text-light">/ 45 лв</span>
+              25 €
+              <!-- <span class="text-lg font-normal text-text-light">/ 45 лв</span> -->
             </p>
           </div>
           <div class="bg-gray-50 p-6 rounded-2xl text-center">
@@ -489,8 +508,8 @@
               Допълнителна седмица проследяване
             </p>
             <p class="text-2xl font-bold text-secondary">
-              38,35 €
-              <span class="text-lg font-normal text-text-light">/ 75 лв</span>
+              40 €
+              <!-- <span class="text-lg font-normal text-text-light">/ 75 лв</span> -->
             </p>
           </div>
         </div>
@@ -585,7 +604,7 @@
               card.classList.remove(
                 "border-accent",
                 "bg-accent/10",
-                "package-card-selected"
+                "package-card-selected",
               );
               card.classList.add("border-transparent");
             });
@@ -596,7 +615,7 @@
               cards[index].classList.add(
                 "border-accent",
                 "bg-accent/10",
-                "package-card-selected"
+                "package-card-selected",
               );
             }
           });
@@ -606,7 +625,7 @@
         if (singleSubmitBtn) {
           singleSubmitBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            window.location.href = "kontakti.html?service=single";
+            window.location.href = "kontakti.html?service=Единична консултация";
           });
         }
 
@@ -615,11 +634,11 @@
           packageSubmitBtn.addEventListener("click", function (e) {
             e.preventDefault();
             const selectedRadio = document.querySelector(
-              ".package-radio:checked"
+              ".package-radio:checked",
             );
             const selectedValue = selectedRadio
               ? selectedRadio.value
-              : "package-full";
+              : "Пълен пакет (4 седмици)";
             window.location.href = "kontakti.html?service=" + selectedValue;
           });
         }
@@ -628,7 +647,8 @@
         if (babySubmitBtn) {
           babySubmitBtn.addEventListener("click", function (e) {
             e.preventDefault();
-            window.location.href = "kontakti.html?service=baby-welcome";
+            window.location.href =
+              "kontakti.html?service=Пакет 'Добре дошло, бебе!'";
           });
         }
       });
